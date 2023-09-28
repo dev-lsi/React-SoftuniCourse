@@ -41,3 +41,14 @@ h2{
   color:aquamarine;
   font-size: 14px;
 }
+
+.timer{
+  color:cornflowerblue;
+  text-align: center;
+}
+
+.butt{
+  font-size: 18px;
+  width: 60px;
+  height: 20px;
+}

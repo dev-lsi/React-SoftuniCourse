@@ -13,6 +13,6 @@ export default function Timer(props) {
             )},1000)
 
    return(
-    <div>Time: {seconds}</div>
+    <div className="timer">Time: {seconds}</div>
    )
 }
