@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import { render } from '@testing-library/react';
 import './App.css';
+import Movie from './components/Movie';
+import Timer from './components/Timer';
+import db from './data/data';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            <Timer start={20}/>
+
+            { db.map((m) => <Movie
+            className="movieCard"
+            title={m.name}
+            director={m.director}
+            year={m.year}
+            actors={m.actors}/>)}
+        </div>
+        
+    )          
+            
 }
 
 export default App;
